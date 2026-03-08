@@ -4,59 +4,30 @@
 
 @layer base {
   :root {
-    --background: 45 60% 98%;
-    --foreground: 215 35% 11%;
-    --card: 0 0% 100%;
-    --card-foreground: 215 35% 11%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 35% 11%;
-    --primary: 160 84% 29%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 43 72% 92%;
-    --secondary-foreground: 215 35% 11%;
-    --muted: 210 30% 95%;
-    --muted-foreground: 215 18% 40%;
-    --accent: 27 92% 92%;
-    --accent-foreground: 24 85% 33%;
-    --destructive: 0 78% 48%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 212 24% 88%;
-    --input: 212 24% 88%;
-    --ring: 160 84% 29%;
-    --radius: 0.75rem;
+    --header-offset: 88px;
   }
 
-  .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-offset) + 16px);
   }
 
   * {
-    @apply border-border;
+    @apply border-slate-800;
   }
 
   body {
-    @apply bg-background text-foreground;
     margin: 0;
     font-family: "Poppins", "Segoe UI", sans-serif;
+    background: #0a0b0c;
+    color: #e2e8f0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
