@@ -1,5 +1,5 @@
 import { SITE_TEXT } from "../../constants/content"
-import profileImage from "../../assets/profile-transparent.png"
+import profileImage from "../../assets/profile-optimized.jpg"
 import { SectionHeading } from "../portfolio/SectionHeading"
 
 export function AboutSection({ portfolioData }) {

@@ -1,7 +1,7 @@
 import { Download, Linkedin, Mail, MapPin, MessageCircle } from "lucide-react"
 import { SITE_TEXT } from "../../constants/content"
 import { LINKS } from "../../constants/link"
-import profileImage from "../../assets/profile-transparent.png"
+import profileImage from "../../assets/profile-optimized.jpg"
 
 function ContactLink({ href, icon: Icon, label, value }) {
   return (
@@ -79,6 +79,10 @@ export function HeroSection({ data }) {
             <img
               src={profileImage}
               alt={`${data.name} profile`}
+              width="700"
+              height="700"
+              fetchPriority="high"
+              decoding="async"
               className="mx-auto w-full rounded-full object-contain grayscale"
             />
           </div>
