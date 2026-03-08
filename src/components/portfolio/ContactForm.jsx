@@ -1,29 +1,18 @@
 import { useState } from "react"
 import { useForm } from "@tanstack/react-form"
 import { CheckCircle2, X } from "lucide-react"
+import { SITE_TEXT } from "../../constants/content"
+import {
+  validateEmail,
+  validateMessage,
+  validateName,
+  validateSubject,
+} from "../../utils/validation"
 
 const inputClassName =
   "w-full rounded-md border border-slate-700 bg-[#101214] px-3 py-2 text-sm text-slate-200 outline-none transition placeholder:text-slate-500 focus:border-orange-400"
 
 const errorClassName = "mt-1 text-xs text-red-400"
-
-const validateName = (value) =>
-  value.trim().length < 2 ? "Name must be at least 2 characters." : undefined
-
-const validateEmail = (value) => {
-  if (!value.trim()) return "Email is required."
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
-    ? undefined
-    : "Enter a valid email address."
-}
-
-const validateSubject = (value) =>
-  value.trim().length < 4 ? "Subject must be at least 4 characters." : undefined
-
-const validateMessage = (value) =>
-  value.trim().length < 15
-    ? "Message must be at least 15 characters."
-    : undefined
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
@@ -41,7 +30,7 @@ export function ContactForm() {
       )
       setSubmitted(true)
       window.setTimeout(() => {
-        window.location.href = `mailto:shyamganeshravichandran@gmail.com?subject=${encodeURIComponent(
+        window.location.href = `mailto:${SITE_TEXT.form.destinationEmail}?subject=${encodeURIComponent(
           value.subject,
         )}&body=${body}`
       }, 300)
@@ -71,7 +60,7 @@ export function ContactForm() {
               htmlFor={field.name}
               className="mb-1 block text-sm text-slate-300"
             >
-              Name
+              {SITE_TEXT.form.nameLabel}
             </label>
             <input
               id={field.name}
@@ -80,7 +69,7 @@ export function ContactForm() {
               onBlur={field.handleBlur}
               onChange={(e) => field.handleChange(e.target.value)}
               className={inputClassName}
-              placeholder="Your name"
+              placeholder={SITE_TEXT.form.namePlaceholder}
             />
             {field.state.meta.isTouched && field.state.meta.errors[0] ? (
               <p className={errorClassName}>{field.state.meta.errors[0]}</p>
@@ -102,7 +91,7 @@ export function ContactForm() {
               htmlFor={field.name}
               className="mb-1 block text-sm text-slate-300"
             >
-              Email
+              {SITE_TEXT.form.emailLabel}
             </label>
             <input
               id={field.name}
@@ -112,7 +101,7 @@ export function ContactForm() {
               onBlur={field.handleBlur}
               onChange={(e) => field.handleChange(e.target.value)}
               className={inputClassName}
-              placeholder="you@example.com"
+              placeholder={SITE_TEXT.form.emailPlaceholder}
             />
             {field.state.meta.isTouched && field.state.meta.errors[0] ? (
               <p className={errorClassName}>{field.state.meta.errors[0]}</p>
@@ -134,7 +123,7 @@ export function ContactForm() {
               htmlFor={field.name}
               className="mb-1 block text-sm text-slate-300"
             >
-              Subject
+              {SITE_TEXT.form.subjectLabel}
             </label>
             <input
               id={field.name}
@@ -143,7 +132,7 @@ export function ContactForm() {
               onBlur={field.handleBlur}
               onChange={(e) => field.handleChange(e.target.value)}
               className={inputClassName}
-              placeholder="Project discussion"
+              placeholder={SITE_TEXT.form.subjectPlaceholder}
             />
             {field.state.meta.isTouched && field.state.meta.errors[0] ? (
               <p className={errorClassName}>{field.state.meta.errors[0]}</p>
@@ -165,7 +154,7 @@ export function ContactForm() {
               htmlFor={field.name}
               className="mb-1 block text-sm text-slate-300"
             >
-              Message
+              {SITE_TEXT.form.messageLabel}
             </label>
             <textarea
               id={field.name}
@@ -174,7 +163,7 @@ export function ContactForm() {
               onBlur={field.handleBlur}
               onChange={(e) => field.handleChange(e.target.value)}
               className={`${inputClassName} min-h-32 resize-y`}
-              placeholder="Tell me about your project and timeline."
+              placeholder={SITE_TEXT.form.messagePlaceholder}
             />
             {field.state.meta.isTouched && field.state.meta.errors[0] ? (
               <p className={errorClassName}>{field.state.meta.errors[0]}</p>
@@ -192,7 +181,7 @@ export function ContactForm() {
             disabled={!canSubmit || isSubmitting}
             className="md:col-span-2 w-fit rounded-md bg-orange-500 px-5 py-2 text-sm font-semibold text-black transition hover:bg-orange-400 disabled:cursor-not-allowed disabled:opacity-60"
           >
-            {isSubmitting ? "Sending..." : "Send Message"}
+            {isSubmitting ? SITE_TEXT.form.sending : SITE_TEXT.form.sendMessage}
           </button>
         )}
       </form.Subscribe>
@@ -204,13 +193,13 @@ export function ContactForm() {
         >
           <div className="flex items-start gap-2">
             <CheckCircle2 className="mt-0.5 h-4 w-4 text-orange-400" />
-            <p>Your Message has been sent successfully!</p>
+            <p>{SITE_TEXT.form.successMessage}</p>
           </div>
           <button
             type="button"
             onClick={() => setSubmitted(false)}
             className="rounded p-1 text-orange-300 transition hover:bg-orange-500/10 hover:text-orange-200"
-            aria-label="Close alert"
+            aria-label={SITE_TEXT.form.closeAlertAria}
           >
             <X className="h-4 w-4" />
           </button>

@@ -1,8 +1,8 @@
 import { LINKS } from "../constants/link"
 
 export const portfolioData = {
-  name: "Shyam Ganesh Ravichandran",
-  role: "Mobile and Full-Stack Engineer",
+  name: "Shyam Ganesh Ramachandran",
+  role: "Full-Stack Developer | Crafting Modern Mobile & Web Applications",
   summary: `Mobile and Full-Stack Engineer with 4 years of experience building production mobile
 applications and backend services. Strong experience in React Native, NestJS and AWS, with
 hands-on work in real-time chat systems, REST API development, cloud services and monitoring
@@ -79,13 +79,28 @@ tools. Experienced in delivering scalable mobile and backend solutions for real 
     },
     {
       name: "Campus Platform",
-      stack: ["Astro.js", "NestJS", "MongoDB"],
+      stack: ["Astro js", "NestJS", "MongoDB"],
       points: [
         "Integrated a chatbot using Typebot and implemented data scraping scripts.",
         "Focused on SEO optimization and user experience improvements.",
       ],
     },
   ],
+  freelancing: {
+    title: "Freelance Services",
+    availability: "Available for part-time and project-based freelance work",
+    engagement: [
+      "End-to-end Mobile and Web application",
+      "NestJS REST API design and implementation",
+      "Production bug fixing, performance tuning, and release support",
+      "Third-party integrations: Firebase, Google Maps, and AWS Lambda",
+    ],
+    workStyle: [
+      "Clear weekly delivery milestones",
+      "Fast communication and transparent updates",
+      "Code review-friendly and maintainable implementation",
+    ],
+  },
   backendHighlights: [
     "Designed and implemented RESTful APIs using NestJS with modular architecture and DTO validation.",
     "Worked with PostgreSQL and DynamoDB for transactional and serverless workloads.",
@@ -101,15 +116,8 @@ tools. Experienced in delivering scalable mobile and backend solutions for real 
       "Astro.js",
     ],
     Backend: ["NestJS", "Python", "FastAPI"],
-    Databases: ["PostgreSQL", "MongoDB", "AWS DynamoDB"],
-    "Cloud and Tools": [
-      "AWS Lambda",
-      "Firebase",
-      "Sentry",
-      "Git",
-      "Postman",
-      "Figma",
-    ],
+    Databases: ["PostgreSQL", "MongoDB"],
+    "Cloud and Tools": ["Firebase", "Sentry", "Git", "Postman", "Figma"],
     "Analytics and Monitoring": ["Firebase Crashlytics", "Google Analytics"],
   },
   education: [

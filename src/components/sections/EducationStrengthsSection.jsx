@@ -1,8 +1,10 @@
+import { SITE_TEXT } from "../../constants/content"
+
 export function EducationStrengthsSection({ portfolioData }) {
   return (
     <section className="mt-10 grid gap-5 lg:grid-cols-2">
       <article className="rounded-xl border border-slate-800 bg-[#17191b] p-5">
-        <h3 className="text-lg font-semibold text-white">Education</h3>
+        <h3 className="text-lg font-semibold text-white">{SITE_TEXT.sections.educationTitle}</h3>
         <div className="mt-4 space-y-3">
           {portfolioData.education.map((item) => (
             <div key={item.degree} className="rounded-lg border border-slate-800 bg-[#101214] p-3">
@@ -14,7 +16,7 @@ export function EducationStrengthsSection({ portfolioData }) {
         </div>
       </article>
       <article className="rounded-xl border border-slate-800 bg-[#17191b] p-5">
-        <h3 className="text-lg font-semibold text-white">Key Strengths</h3>
+        <h3 className="text-lg font-semibold text-white">{SITE_TEXT.sections.strengthsTitle}</h3>
         <ul className="mt-4 space-y-2 text-slate-300">
           {portfolioData.strengths.map((strength) => (
             <li key={strength} className="flex gap-2">

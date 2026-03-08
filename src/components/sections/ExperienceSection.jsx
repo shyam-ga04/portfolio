@@ -1,10 +1,11 @@
+import { SITE_TEXT } from "../../constants/content"
 import { SectionHeading } from "../portfolio/SectionHeading"
 import { TimelineItem } from "../portfolio/TimelineItem"
 
 export function ExperienceSection({ portfolioData }) {
   return (
     <section id="experience" className="mt-10">
-      <SectionHeading eyebrow="Experience" title="Professional Experience" />
+      <SectionHeading eyebrow={SITE_TEXT.sections.experienceEyebrow} title={SITE_TEXT.sections.experienceTitle} />
       <div className="space-y-4">
         {portfolioData.experience.map((item) => (
           <TimelineItem

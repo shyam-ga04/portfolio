@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App.jsx";
 import { LINKS } from "./constants/link";
 
-const fontLinkId = "poppins-font-stylesheet";
+const fontLinkId = LINKS.poppinsFontStylesheetId;
 if (!document.getElementById(fontLinkId)) {
   const linkTag = document.createElement("link");
   linkTag.id = fontLinkId;
