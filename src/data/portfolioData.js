@@ -1,3 +1,5 @@
+import { LINKS } from "../constants/link"
+
 export const portfolioData = {
   name: "Shyam Ganesh Ravichandran",
   role: "Mobile and Full-Stack Engineer",
@@ -6,7 +8,7 @@ export const portfolioData = {
   location: "Bangalore, India",
   email: "shyamganeshravichandran@gmail.com",
   phone: "+91 9677316806",
-  linkedin: "https://www.linkedin.com/in/shyam-ganesh-ravichandran/",
+  linkedin: LINKS.linkedInProfile,
   experience: [
     {
       company: "Soverg Private Limited",

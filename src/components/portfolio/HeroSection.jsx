@@ -1,5 +1,5 @@
 import { Linkedin, Mail, MapPin, Phone } from "lucide-react"
-import { Button } from "../ui/button"
+import { LINKS } from "../../constants/link"
 
 function ContactLink({ href, icon: Icon, label, value }) {
   return (
@@ -7,20 +7,20 @@ function ContactLink({ href, icon: Icon, label, value }) {
       href={href}
       target={href.startsWith("http") ? "_blank" : undefined}
       rel={href.startsWith("http") ? "noreferrer" : undefined}
-      className="group inline-flex items-center gap-2 rounded-md border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-700 shadow-sm transition hover:border-emerald-300 hover:text-emerald-700"
+      className="group inline-flex max-w-full items-start gap-2 rounded-md border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-700 shadow-sm transition hover:border-emerald-300 hover:text-emerald-700"
     >
-      <Icon className="h-4 w-4 text-emerald-700 transition group-hover:scale-110" />
+      <Icon className="mt-0.5 h-4 w-4 shrink-0 text-emerald-700 transition group-hover:scale-110" />
       <span className="sr-only">{label}</span>
-      <span>{value}</span>
+      <span className="min-w-0 break-words">{value}</span>
     </a>
   )
 }
 
 export function HeroSection({ data }) {
   const email = data.email.trim()
-  const emailUrl = `https://mailto:${email}`
+  const emailUrl = `mailto:${email}`
   const whatsappNumber = data.phone.replace(/\D/g, "")
-  const whatsappUrl = `https://wa.me/${whatsappNumber}`
+  const whatsappUrl = `${LINKS.whatsappBase}/${whatsappNumber}`
 
   return (
     <section className="rounded-2xl border border-slate-200 bg-white/90 p-7 shadow-sm backdrop-blur sm:p-10">
