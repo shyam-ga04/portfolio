@@ -3,8 +3,10 @@ import { LINKS } from "../constants/link"
 export const portfolioData = {
   name: "Shyam Ganesh Ravichandran",
   role: "Mobile and Full-Stack Engineer",
-  summary:
-    "Mobile and Full-Stack Engineer with 4 years of experience building production mobile applications and backend services using React Native, NestJS, and AWS.",
+  summary: `Mobile and Full-Stack Engineer with 4 years of experience building production mobile
+applications and backend services. Strong experience in React Native, NestJS and AWS, with
+hands-on work in real-time chat systems, REST API development, cloud services and monitoring
+tools. Experienced in delivering scalable mobile and backend solutions for real products.`,
   location: "Bangalore, India",
   email: "shyamganeshravichandran@gmail.com",
   phone: "+91 9677316806",
@@ -20,8 +22,8 @@ export const portfolioData = {
         "Integrated XMPP-based messaging with custom chat UI and message state handling.",
         "Implemented Firebase Crashlytics and Google Analytics for crash tracking, stability, and user behavior monitoring.",
         "Collaborated with designers using Figma and participated in sprint planning and peer code reviews.",
-        "Worked with backend teams to integrate REST APIs and improve app performance and reliability."
-      ]
+        "Worked with backend teams to integrate REST APIs and improve app performance and reliability.",
+      ],
     },
     {
       company: "Incresco Technology Solutions Private Limited",
@@ -33,9 +35,9 @@ export const portfolioData = {
         "Designed and implemented REST APIs using NestJS for application workflows and integrations.",
         "Developed backend services with AWS Lambda and DynamoDB for serverless workloads.",
         "Built form processing and PDF generation features using NestJS and pdfmake.",
-        "Integrated Sentry for centralized error monitoring and production issue tracking."
-      ]
-    }
+        "Integrated Sentry for centralized error monitoring and production issue tracking.",
+      ],
+    },
   ],
   projects: [
     {
@@ -45,8 +47,8 @@ export const portfolioData = {
         "Implemented real-time chat, push notifications, and Firebase integration.",
         "Integrated Google Maps and Google Places Autocomplete API.",
         "Implemented QR code customization based on QR standards.",
-        "Added analytics and crash monitoring for production usage."
-      ]
+        "Added analytics and crash monitoring for production usage.",
+      ],
     },
     {
       name: "Edvanza App",
@@ -54,8 +56,8 @@ export const portfolioData = {
       points: [
         "Developed mobile UI and business logic for Android and iOS platforms.",
         "Integrated backend services using AWS Lambda.",
-        "Ensured cross-platform compatibility and performance optimization."
-      ]
+        "Ensured cross-platform compatibility and performance optimization.",
+      ],
     },
     {
       name: "App Hero",
@@ -63,8 +65,8 @@ export const portfolioData = {
       points: [
         "Designed and developed REST APIs using NestJS and PostgreSQL for form processing and PDF generation workflows.",
         "Created complex forms and backend PDF generation pipelines.",
-        "Integrated Sentry and implemented scalable backend APIs."
-      ]
+        "Integrated Sentry and implemented scalable backend APIs.",
+      ],
     },
     {
       name: "Izzo App",
@@ -72,52 +74,65 @@ export const portfolioData = {
       points: [
         "Led end-to-end mobile application delivery.",
         "Implemented Google Maps integration and location-based active event suggestions.",
-        "Integrated analytics and theming support."
-      ]
+        "Integrated analytics and theming support.",
+      ],
     },
     {
       name: "Campus Platform",
       stack: ["Astro.js", "NestJS", "MongoDB"],
       points: [
         "Integrated a chatbot using Typebot and implemented data scraping scripts.",
-        "Focused on SEO optimization and user experience improvements."
-      ]
-    }
+        "Focused on SEO optimization and user experience improvements.",
+      ],
+    },
   ],
   backendHighlights: [
     "Designed and implemented RESTful APIs using NestJS with modular architecture and DTO validation.",
     "Worked with PostgreSQL and DynamoDB for transactional and serverless workloads.",
     "Implemented centralized error handling, logging, and monitoring using Sentry and Firebase Crashlytics.",
-    "Integrated AWS Lambda-based services for backend processing and integrations."
+    "Integrated AWS Lambda-based services for backend processing and integrations.",
   ],
   skills: {
-    "Frontend and Mobile": ["JavaScript", "TypeScript", "React", "React Native", "Astro.js"],
+    "Frontend and Mobile": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "React Native",
+      "Astro.js",
+    ],
     Backend: ["NestJS", "Python", "FastAPI"],
     Databases: ["PostgreSQL", "MongoDB", "AWS DynamoDB"],
-    "Cloud and Tools": ["AWS Lambda", "Firebase", "Sentry", "Git", "Postman", "Figma"],
-    "Analytics and Monitoring": ["Firebase Crashlytics", "Google Analytics"]
+    "Cloud and Tools": [
+      "AWS Lambda",
+      "Firebase",
+      "Sentry",
+      "Git",
+      "Postman",
+      "Figma",
+    ],
+    "Analytics and Monitoring": ["Firebase Crashlytics", "Google Analytics"],
   },
   education: [
     {
       degree: "B.Tech in Information Technology",
       institution: "Anjalai Ammal Mahalingam Engineering College, Thiruvarur",
-      period: "2019 - 2022"
+      period: "2019 - 2022",
     },
     {
       degree: "Diploma in Electrical and Electronics Engineering (DEEE)",
       institution: "Shanmugha Polytechnic Engineering College, Thanjavur",
-      period: "2016 - 2019"
+      period: "2016 - 2019",
     },
     {
       degree: "SSLC",
       institution: "Maxwell Matric Higher Secondary School, Thanjavur",
-      period: "2015 - 2016"
-    }
+      period: "2015 - 2016",
+    },
   ],
   strengths: [
     "Strong analytical and problem-solving skills.",
     "Ownership-driven and result-oriented.",
     "Quick adaptability to new tools and frameworks.",
-    "Excellent collaboration with cross-functional teams."
-  ]
-};
+    "Excellent collaboration with cross-functional teams.",
+  ],
+}
